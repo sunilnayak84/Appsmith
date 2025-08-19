@@ -1,0 +1,2 @@
+SELECT country FROM public.users
+WHERE id {{Table1.selectedRow.id}};

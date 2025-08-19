@@ -84,6 +84,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "isVisiblePagination"
     }
   ],
   "dynamicTriggerPathList": [
@@ -101,7 +104,7 @@
   "isVisible": true,
   "isVisibleDownload": true,
   "isVisibleFilters": false,
-  "isVisiblePagination": true,
+  "isVisiblePagination": "true",
   "isVisibleSearch": true,
   "key": "hs9beyvdy6",
   "label": "Data",
