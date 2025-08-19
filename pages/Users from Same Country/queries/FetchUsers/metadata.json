@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68a3276fd0b8bb03282a0ce8_96a57255-6417-4879-b4e4-bf24bbcff4d9",
-  "id": "Page1_UpdateUser",
+  "gitSyncId": "68a47f50d0b8bb03282a34d0_f2b9a85d-6649-47e9-8762-177dd3a58452",
+  "id": "Users from Same Country_FetchUsers",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.\"users\" SET\n    \"gender\" = '{{CreateUserForm.formData.gender}}',\n    \"email\" = '{{CreateUserForm.formData.email}}',\n    \"name\" = '{{CreateUserForm.formData.name}}'\nWHERE id = '{{Table1.selectedRow.id}}'",
+      "body": "SELECT id, gender, name, email FROM public.\"users\"\nLIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "Users Database",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "UpdateUser",
-    "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "FetchUsers",
+    "pageId": "Users from Same Country",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

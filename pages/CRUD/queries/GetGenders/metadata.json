@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68a3276fd0b8bb03282a0ce8_dfe68392-485a-41d3-bace-edbc87b7c822",
-  "id": "Page1_FetchUsers",
+  "gitSyncId": "68a3276fd0b8bb03282a0ce8_55765a09-ab08-4190-9a2a-5c60961e25c0",
+  "id": "CRUD_GetGenders",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, gender, name, email FROM public.\"users\"\nWHERE gender ILIKE '{{GenderFilter.selectedOptionValue}}';",
+      "body": "SELECT DISTINCT(gender) FROM public.\"users\" WHERE gender <> '';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,13 +22,9 @@
       "name": "Users Database",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "FetchUsers",
-    "pageId": "Page1",
+    "dynamicBindingPathList": [],
+    "name": "GetGenders",
+    "pageId": "CRUD",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }

@@ -18,8 +18,12 @@
   "icon": "cat",
   "pages": [
     {
-      "id": "Page1",
+      "id": "CRUD",
       "isDefault": true
+    },
+    {
+      "id": "Users from Same Country",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
