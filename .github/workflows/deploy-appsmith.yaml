@@ -1,0 +1,13 @@
+name: appsmith-cd  # Workflow name
+
+on:
+  push:
+    branches:
+      - master  # Trigger on push to master branch
+
+jobs:
+  deploy-appsmith:
+    runs-on: ubuntu-latest  # Run on Ubuntu
+
+    steps:
+      - run: curl --location --fail-early --request POST https://yard.demo.appsmith.com/api/v1/git/applications/68a47a9dd0b8bb03282a338a/deploy?refName=master --header '1e2de39b650a9f5ee014b49c5404fc5adfe197573c9655baec07ebf1bab20c01935512a7884538f930480c8c6f9bd6e688748db6366ca9d7d5e0d4c5cbe3a3e77cef4a5fd55458b51788d72440cf1e96c7098cad54c66b52d005b3b75ecea09e92a08e8b7218c5692f1e474f94c13d8fce42a40005fff29075d60cf57e9dd1a4c674365a233753cb2dfbaf768c5daeb1573573ddf344289765ac4c1c9cb505d62105fe0f2d5e93a55b5ef0577d46ec84085ecd127821658d271e49d527a885cf42528a7cf0560ddf66db38a20e4f069a922c8ba3b651dfe42586c30a7ac2066b'
