@@ -1,0 +1,2 @@
+SELECT id, gender, name, email FROM public."users"
+WHERE gender ILIKE '{{GenderFilter.selectedOptionValue}}';

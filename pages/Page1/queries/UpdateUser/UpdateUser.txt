@@ -1,0 +1,5 @@
+UPDATE public."users" SET
+    "gender" = '{{CreateUserForm.formData.gender}}',
+    "email" = '{{CreateUserForm.formData.email}}',
+    "name" = '{{CreateUserForm.formData.name}}'
+WHERE id = '{{Table1.selectedRow.id}}'

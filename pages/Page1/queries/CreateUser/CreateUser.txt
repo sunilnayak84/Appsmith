@@ -1,0 +1,2 @@
+INSERT INTO public."users" ("gender", "email", "name")
+  VALUES ('{{CreateUserForm.formData.gender}}', '{{CreateUserForm.formData.email}}', '{{CreateUserForm.formData.name}}');
